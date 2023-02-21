@@ -1,0 +1,32 @@
+import turtle,random
+card=turtle.Screen()
+card.setup(2,2)
+card.title("MERRY CHRISTMAS!")
+colors=['#92b6f0','#d95d78','#5cdbb5','#5ccde0','#e0d758','ed9277']
+card.bgcolor(random.choice(colors))
+tree=turtle.Turtle()
+turtle.register_shape("xmas.gif")
+tree.pu()
+tree.goto(100,0)
+pen=turtle.Turtle()
+pen.hideturtle()
+pen.colour("red")
+pen.pu()
+pen.setx(-500)
+pen.write("CHRISTMAS\nGREETINGS!!",font=("ravie","40","italic"),align="left")
+pen.setheading(-90)
+pen.fd(100)
+pen.write("TO ALL OF YOU",font=("courier",20,"bold"),align="left")
+snowlist=[]
+def makeSnow():
+    for i in range(55):
+        snow=turtle.Turtle()
+        snow.pu()
+        snow.color("white")
+        snow.shape("star")
+        snow.speed(0)
+snow.goto(random.randint(-700,700),random.randint(-700,700))
+snow.dot(5,'white')
+snowlist.append(snow)
+card.bgcolor(random.choice(colors))
+        
